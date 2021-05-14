@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8" />
+<title>Калькулятор</title>
+
+</head>
+
+<body>
+<form name="calc" id="calculator">
+<table>
+<tr>
+<td>
+<input type="text" name="input" size="16" class="display"
+id="output_number">
+</td>
+</tr>
+<tr>
+<td class="buttons">
+<input type="button" name="one" value="1" Onclick="calc.input.value +='1'">
+<input type="button" name="two" value="2" Onclick="calc.input.value +='2'">
+<input type="button" name="three" value="3" Onclick="calc.input.value +='3'">
+<input type="button" name="add" value="+" Onclick="calc.input.value +='+'"> 
+<br>
+<input type="button" name="four" value="4" Onclick="calc.input.value +='4'">
+<input type="button" name="five" value="5" Onclick="calc.input.value +='5'">
+<input type="button" name="six" value="6" Onclick="calc.input.value +='6'">
+<input type="button" name="sub" value="-" Onclick="calc.input.value +='-'"> 
+<br>
+<input type="button" name="seven" value="7" Onclick="calc.input.value +='7'">
+<input type="button" name="eight" value="8" Onclick="calc.input.value +='8'">
+<input type="button" name="nine" value="9" Onclick="calc.input.value +='9'">
+<input type="button" name="mul" value="x" Onclick="calc.input.value +='*'"> 
+<br>
+<input type="button" name="clear" value="C" Onclick="calc.input.value +=''">
+<input type="button" name="zero" value="0" Onclick="calc.input.value +='0'">
+<input type="button" name="doit" value="=" Onclick="calc.Result()">
+<input type="button" name="div" value="/" Onclick="calc.input.value +='/'">
+</td>
+</tr>
+</table>
+
+</form>
+</body>
+</html>
+
+<script>
+function calcResult() {
+let result = eval(calc.input.value)
+let answer = '';
+if parseInt(result) > 15) {
+answer = 'Слишком большое число';
+} else {
+answer = parseInt(result);
+}
+console.log(answer);
+calc.input.value = answer;
+}
+</script>
+<style type="text/css">
+#calculator * {font-size: 16px; font-size: 14px}
+#calculator table {border: solid 3px silver; border-spacing: 3px;
+background-color: #FFC0CB; border-radius: 15px; border-color:#808080}
+#calculator table td {border-spacing: 3px;}
+input.display {width: 166px; text-align: right; background-color: #D3D3D3}
+td.buttons {border-top: solid 1px silver;}
+input[type= button]:hover {
+transition: .1s all ease;
+opacity: .85;
+background-color: #98FF98;
+border: 1px solid #999;
+}
+input [type= button] {width: 40px; height: 30px; border-radius: 5px;}
+</style>

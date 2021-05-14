@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<linl
+href="https://fonts.googleapis.com/css?family=Comfortaa:400,500,600,700&display=swap" rel="stylesheet">
+</head>
+<body bqcolor=#E6E6FA>
+<div id="header" class="container-block">
+<h1 style="text-align: center">Нуриев Владислав</h1>
+<button id="addPicture" class="btn" onclick="changerImage()">Replace Image</button>
+<button id="addFalcon" class="btn" onClick="addFalcon()">Add Falcon</button>
+</div>
+<main>
+<div class="container yellow">
+<div class="star-wars-container">
+<img id="changeable-image" src="StarWars.png" alt="picture">
+</div>
+</div>
+<div id="addble-image" class="container aqua blockable" >
+<div class="star-wars-container">
+<img src=""falcon.jpg" alt."falcon">
+</div>
+</div>
+</main>
+</body>
+</html>
+<style>
+html, body {
+font-family: 'Comfortaa', cursive;
+margin: 0;
+padding: 0;
+}
+.blockable {
+display: none;
+}
+.container-block {
+text-align: center;
+}
+.container {
+margin-top: 20px;
+border: 1px solid black;
+}
+.yellow {
+background: yellow;
+}
+.aqua {
+background: #7FFFD4;
+}
+.star-wars-container {
+margin-top: 10px;
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+display: -o-flex;
+display: flex;
+justify-content: center;
+margin: 40px 0;
+}
+.btn {
+padding: 10px 20px;
+border-radius: 5px;
+border: 1px solid #ccc;
+font-family: inherit;
+}
+.btn:hover {
+transition: .1s all ease;
+opacity: .85;
+background-color: lightyellow;
+border: 1px solid #999;
+}
+</style>
+<script>
+const imageArr = [
+'StarWars.png'
+'SkyWalkerRise.png'
+];
+//Заменяет картинки по нажатию "Replace Image"
+funcktion changerImage() P
+let imgRef = document.gerElementById('changeable-image');
+
+let pictureUrl = imageArr[0];
+console.log(pictureUrl);
+let imgSrc = imgRef.src.substring(imgRef.src.lastIndexOf('/') + 1);
+console.log(pictureUrl == ImgSrc);
+if(pictureUrl ==imgSrc) {
+imgRef.src = imageArr[1];
+} else {
+imgRef.src = imageArr[0];
+}
+}
+function addFalcon() {
+
+let imgRef = document.getElementById('addble-image');
+let arr = imgRef.className.split(' ');
+let btnText = documet.getElementById('addFalcon');
+if ( arr.includes('blockable') ) {
+imgRef.className = 'container aqua';
+btnText.innerHTML = 'Remove Falcon';
+} else {
+imgRef.className = 'container aqua blockable';
+btnText.innerHTML = 'Add Falcon';
+}
+}
+<script>
